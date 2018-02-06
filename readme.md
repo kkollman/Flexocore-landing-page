@@ -11,3 +11,4 @@ Setup
 ```
 npm install
 ```
+To enable watcher, simply run `gulp watch`
