@@ -1,0 +1,52 @@
+.flexo__about-company--header--title,
+.flexo__about-company--to-copy--title {
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #666666;
+  line-height: 36px;
+  font-family: "Lehigh Personal";
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.flexo__about-company--header--text,
+.flexo__about-company--to-copy--text {
+  width: 100%;
+  color: #666666;
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 26px;
+  margin-bottom: 31px;
+}
+
+.flexo__about-company--header:after {
+  content: '';
+  display: block;
+  background: #D6D6D6;
+  height: 1px;
+  // margin-top: 31px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.flexo__about-company--to-copy--img {
+  width: 100%;
+  height: auto;
+}
+
+.flexo__about-company--to-copy--span {
+  color: #BDC6CD;
+  font-family: 'Roboto';
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 13px;
+}
+
+.flexo__about-company--to-copy--title {
+  text-align: left;
+  margin-top: 0;
+}
