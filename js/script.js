@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   //add onclick handler to open sidemenu
-  const hamburger = document.querySelector('.menu-element__hamburger')
+  const hamburgerButtons = document.querySelectorAll('.hamburger')
 
 
-  const toggleMenu = function (e) {
+  const toggleMenu = function () {
      document.querySelector('body').classList.toggle('menu-open')
   }
 
-  hamburger.addEventListener('click', (e) => toggleMenu(e));
+  hamburgerButtons.forEach(button => button.addEventListener('click', () => toggleMenu()));
 
-});
+  });
