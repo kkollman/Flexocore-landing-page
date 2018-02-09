@@ -1,0 +1,15 @@
+.flexo-topbar {
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 24px;
+  }
+
+
+  .menu-element__hamburger {
+    cursor: pointer;
+  }
+}
