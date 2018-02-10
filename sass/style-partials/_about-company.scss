@@ -1,52 +1,55 @@
-.flexo__about-company--header--title,
-.flexo__about-company--to-copy--title {
-  width: 100%;
+@import "style-partials/_colors.scss";
+@import "style-partials/_variables.scss";
+.flexo-about__header--title,
+.flexo-about__company-offer--title {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
-  color: #666666;
+  color: $mainText;
   line-height: 36px;
-  font-family: "Lehigh Personal";
+  font-family: $fontLehigh;
   margin-top: 40px;
   margin-bottom: 16px;
 }
 
-.flexo__about-company--header--text,
-.flexo__about-company--to-copy--text {
+.flexo-about__header--into,
+.flexo-about__company-offer--text {
   width: 100%;
-  color: #666666;
-  font-family: 'Roboto';
+  color: $mainText;
+  font-family: $fontRoboto;
   font-size: 12px;
   line-height: 26px;
   margin-bottom: 31px;
 }
 
-.flexo__about-company--header:after {
+.flexo-about__header{
+  margin-bottom: 40px
+}
+
+.flexo-about__header:after {
   content: '';
   display: block;
-  background: #D6D6D6;
+  background: $hrColor;
   height: 1px;
-  // margin-top: 31px;
-  margin-bottom: 40px;
   width: 100%;
 }
 
-.flexo__about-company--to-copy--img {
+.flexo-about__company-offer--img {
   width: 100%;
   height: auto;
 }
 
-.flexo__about-company--to-copy--span {
-  color: #BDC6CD;
-  font-family: 'Roboto';
+.flexo-about__company-offer--span {
+  color: $offerColor;
+  font-family: $fontRoboto;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 2px;
   line-height: 13px;
 }
 
-.flexo__about-company--to-copy--title {
+.flexo-about__company-offer--title {
   text-align: left;
   margin-top: 0;
 }
