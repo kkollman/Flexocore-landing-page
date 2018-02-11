@@ -59,7 +59,8 @@
             <div class="flexo-people__employees-employee-position-name-container">
 
               <span class="flexo-people__employees-employee-position">CEO</span>
-              <h2 class="flexo-people__employees-employee-name">Rafał Kowalski </h2>
+              <h2 class="flexo-people__employees-employee-name">Jan Brzęczyszczykiewicz </h2>
+              <!--Tutaj dałem imię i nazwisko zawierające więcej liter, by można było zobaczyć co stanie się z nagłówkiem, kiedy pracownik ma długie nazwisko bądź imię :)-->
             </div>
           </div>
           <p class="flexo-people__employees-employee-info">Flexcore oferuje szeroki zakres usług. Od przygotowania projektów do druku aż do wykonania gotowego opakowania. Wyróżnia nas wieloletnie doświadczenie w druku fleksograficznym, które w połączeniu z wykorzystaniem profesjonalnych narzędzi pre-press
@@ -87,6 +88,58 @@
         </div>
       </div>
     </div>
+  </section>
+  <section class="flexo-information">
+    <div class="container">
+      <div class="row">
+        <h2 class="flexo-information__title">Dane firmy</h2>
+        <div class="flexo-information__container">
+          <div class="flexo-information__marks-container">
+            <div class="flexo-information__marks-container-map"><img src="" alt="">
+              <p>mark:</p>
+            </div>
+            <div class="flexo-information__marks-container-tel">
+              <img src="" alt="">
+              <p>tel:</p>
+            </div>
+            <div class="flexo-information__marks-container-mail">
+              <img src="" alt="">
+              <p>mail:</p>
+            </div>
+          </div>
+          <div class="flexo-information_details-container">
+            <p>Flexocore Sp. z o.o. Sp. K. ul. Piątkowska 201A 60-693 Poznań
+            </p>
+            <p>NIP 781 19 23 156</p>
+            <p>+48 696 072 770<br> +48 786 173 323</p>
+            <p>biuro@flexocore.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="flexo-map">
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {
+          lat: 52.440358,
+          lng: 16.912089
+        };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQIcgc0OC4-LO2EKt76mNQQ5PWy2uueag&callback=initMap">
+    </script>
+
   </section>
 </body>
 
