@@ -14,7 +14,7 @@ body.menu-open {
   left: 0;
   right: 0;
   transition: all .7s;
-  position: absolute;
+  position: fixed;
   top: -100%;
   background-color: $mainBackground;
   z-index: 2;
@@ -66,6 +66,7 @@ body.menu-open {
   position: fixed;
   width: 100%;
   z-index: 1;
+  transition: all 0.3s;
 
   &__menu {
     display: flex;
@@ -73,6 +74,22 @@ body.menu-open {
     justify-content: space-between;
     align-items: center;
     padding: 30px 0 24px;
+    transition: all 0.3s;
+  }
+
+  &.floating {
+    background-color: $mainBackground;
+    box-shadow: 0 14px 11px -12px rgba(0,0,0,0.2);
+
+
+    .flexo-topbar__menu {
+      padding: 10px 0 8px;
+    }
+
+    .flexo-separator {
+      display: none;
+    }
+
   }
 }
 
