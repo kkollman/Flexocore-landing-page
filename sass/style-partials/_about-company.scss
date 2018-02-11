@@ -1,0 +1,55 @@
+@import "style-partials/_colors.scss";
+@import "style-partials/_variables.scss";
+.flexo-about__header--title,
+.flexo-about__company-offer--title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  color: $mainText;
+  line-height: 36px;
+  font-family: $fontLehigh;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.flexo-about__header--into,
+.flexo-about__company-offer--text {
+  width: 100%;
+  color: $mainText;
+  font-family: $fontRoboto;
+  font-size: 12px;
+  line-height: 26px;
+  margin-bottom: 31px;
+}
+
+.flexo-about__header{
+  margin-bottom: 40px
+}
+
+.flexo-about__header:after {
+  content: '';
+  display: block;
+  background: $hrColor;
+  height: 1px;
+  width: 100%;
+}
+
+.flexo-about__company-offer--img {
+  width: 100%;
+  height: auto;
+}
+
+.flexo-about__company-offer--span {
+  color: $offerColor;
+  font-family: $fontRoboto;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 13px;
+}
+
+.flexo-about__company-offer--title {
+  text-align: left;
+  margin-top: 0;
+}
