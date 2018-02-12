@@ -1,0 +1,57 @@
+@import "_colors.scss";
+@import "_variables.scss";
+
+.flexo-information {
+  margin-bottom: 20px;
+}
+
+.flexo-information__container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  color: $mainText;
+  font-family: $fontRoboto;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.flexo-information__title {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: $mainText;
+  line-height: 36px;
+  font-family: $fontLehigh;
+  margin-top: 40px;
+  margin-left: 51px;
+}
+
+.flexo-information__marks-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  flex-grow: 2;
+}
+
+.flexo-information_details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 31px;
+
+  p {
+    margin: 15px 0 5px;
+  }
+}
+
+.flexo-information__marks-container-map {
+  margin-top: 5px;
+}
+
+.flexo-information__marks-container-tel {
+  margin-top: 110px;
+}
+
+.flexo-information__marks-container-mail {
+  margin-top: 39px;
+}

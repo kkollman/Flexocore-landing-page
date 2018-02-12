@@ -1,26 +1,28 @@
-.flexo-people__employees--employee-header{
+@import "_colors.scss";
+@import "_variables.scss";
+
+.flexo-people__employees--employee-header {
   display: flex;
   flex-direction: row;
 }
 
-.flexo-people__employees--employee-img-container{
+.flexo-people__employees--employee-img-container {
   margin-right: 10px;
 }
 
-.flexo-people__employees-employee-position-name-container{
+.flexo-people__employees-employee-position-name-container {
 display: flex;
 flex-direction: column;
-padding-top: 15px;
+padding-top: 20px;
 }
 
-.flexo-people__employees--employee-img{
+.flexo-people__employees--employee-img {
   width: 68px;
   border-radius: 50%;
   height: 68px;
 }
 
-.flexo-people__employees-employee-position
-{
+.flexo-people__employees-employee-position {
   color: $offerColor;
   font-family: $fontRoboto;
   font-size: 11px;
@@ -29,30 +31,23 @@ padding-top: 15px;
   line-height: 13px;
 
 }
-@import "style-partials/_colors.scss";
-@import "style-partials/_variables.scss";
 
-
-.flexo-people__employees-employee-name
-
-{
+.flexo-people__employees-employee-name {
   font-size: 22px;
   font-weight: bold;
-  text-align: center;
   letter-spacing: 1px;
   color: $mainText;
-  line-height: 36px;
   font-family: $fontLehigh;
-
 
 }
 
 
-.flexo-people__employees-employee-info{
+.flexo-people__employees-employee-info {
   width: 100%;
   color: $mainText;
   font-family: $fontRoboto;
   font-size: 12px;
   line-height: 26px;
   margin-bottom: 31px;
+  margin-top: 10px;
 }
