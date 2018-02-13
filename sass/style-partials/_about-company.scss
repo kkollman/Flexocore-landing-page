@@ -3,13 +3,12 @@
 .flexo-about__header--title,
 .flexo-about__company-offer--title {
   font-size: 22px;
-  font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
   color: $mainText;
   line-height: 36px;
-  font-family: $fontLehigh;
-  margin-top: 40px;
+  font-family: $headerFont;
+  font-weight: bold;
   margin-bottom: 16px;
 }
 
@@ -21,18 +20,15 @@
   font-size: 12px;
   line-height: 26px;
   margin-bottom: 31px;
+  font-weight: 300;
 }
 
 .flexo-about__header{
-  margin-bottom: 40px
-}
-
-.flexo-about__header:after {
-  content: '';
-  display: block;
-  background: $hrColor;
-  height: 1px;
-  width: 100%;
+  margin: 40px 0;
+  background-image: url("../media/images/flexocore_loop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 .flexo-about__company-offer--img {
@@ -52,4 +48,12 @@
 .flexo-about__company-offer--title {
   text-align: left;
   margin-top: 0;
+}
+
+
+.flexo-about {
+
+  &__header-separator{
+    margin: 40px auto;
+  }
 }

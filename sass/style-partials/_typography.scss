@@ -1,10 +1,36 @@
+@font-face {
+  font-family: 'Avenir LT Std';
+  src: url('../media/fonts/AvenirLTStd-Black.woff2') format('woff2'),
+  url('../media/fonts/AvenirLTStd-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lehigh Personal';
+  src: url('../media/fonts/LehighPersonal-Bold.woff2') format('woff2'),
+  url('../media/fonts/LehighPersonal-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 $sansSerifFont: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-$headerFont: 'Avenir', 'Helvetica', 'Arial', sans-serif;
+$headerFont: 'Lehigh Personal', serif;
+$titleFont: 'Avenir LT Std', 'Helvetica', 'Arial', sans-serif;
+
+$fontLehigh: 'Lehigh Personal', Georgia, "Times New Roman", sans-serif;
+
+$fontRoboto: 'Roboto', Helvetica, Arial, sans-serif;
 
 .header {
-  color: #FFFFFF;
-  font-size: 50px;
-  font-weight: 900;
-  text-align: center;
   font-family: $headerFont;
+}
+
+.flexo__title {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: $titleFont;
+  font-weight: 900;
+  font-size: 50px;
 }
