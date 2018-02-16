@@ -1,10 +1,12 @@
 @import "style-partials/colors";
 @import "style-partials/typography";
-@import "style-partials/_variables.scss";
+@import "style-partials/variables";
+@import "style-partials/animations";
 @import "style-partials/layout";
 @import "style-partials/topbar";
 @import "style-partials/landing";
-@import "style-partials/_about-company.scss";
-@import "style-partials/_people.scss";
-@import "style-partials/_information.scss";
-@import "style-partials/_map.scss";
+@import "style-partials/about-company";
+@import "style-partials/people";
+@import "style-partials/information";
+@import "style-partials/map";
+@import "style-partials/numbers";

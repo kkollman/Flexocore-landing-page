@@ -1,0 +1,75 @@
+@import "colors";
+@import "variables";
+@import "animations";
+
+.flexo-numbers {
+  background-color: $mainBlue;
+  color: $contrast;
+  padding: 40px 0;
+  font-family: $fontRoboto;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  &__number {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 21px;
+    height: 108px;
+    width: 108px;
+    border-radius: 50%;
+    border: 4px solid $contrast;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      display: block;
+      height: 16px;
+      width: 16px;
+      background-color: $contrast;
+      border-radius: 50%;
+      transition: all 0.6s;
+    }
+
+    &:hover {
+      border: none;
+      background-color: $contrast;
+      color: $mainBlue;
+      font-size: 20px;
+      transform: scale(1.1);
+      margin: 10px;
+      //tu trzeba wykombinowac tak, zeby pozycja befora byla ustalana bez wykorzystania transformu - transform ma dzialac tylko przy animacji
+
+      &:before {
+        background-color: $mainBlue;
+        animation: rotate 3s infinite linear;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 30px;
+  }
+
+  &__description {
+    max-width: 156px;
+    text-align: center;
+  }
+}
