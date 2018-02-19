@@ -1,0 +1,12 @@
+.flexo-footer {
+
+  &__logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 38px 0 32px;
+  }
+
+  &__logo {
+    width: 150px;
+  }
+}

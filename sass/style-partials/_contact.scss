@@ -57,6 +57,10 @@
     line-height: 16px;
     padding: 17px 15px;
     resize: none;
+
+    &::placeholder {
+      color: #BDC6CD;
+    }
   }
 
   &__button {

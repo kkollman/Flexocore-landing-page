@@ -8,12 +8,30 @@
   padding: 40px 0;
   font-family: $fontRoboto;
 
+  &__container {
+
+    @media (min-width: 580px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__item {
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
     align-items: center;
     cursor: pointer;
+
+    @media (min-width: 580px) {
+      max-width: 162px;
+      margin: 0 auto;
+      justify-content: flex-start;
+
+      &:not(:last-child) {
+        margin-right: 14px;
+      }
+    }
 
     &:hover {
 
@@ -88,6 +106,10 @@
     max-width: 156px;
     text-align: center;
     font-weight: 300;
+
+    @include tablet {
+      line-height: 22px;
+    }
   }
 }
 

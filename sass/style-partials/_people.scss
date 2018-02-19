@@ -5,26 +5,32 @@
   padding-top: 40px;
 }
 
+.flexo-people__employees {
+  margin-bottom: 40px;
+}
 
 .flexo-people__employees--employee-header {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .flexo-people__employees--employee-img-container {
   margin-right: 10px;
-}
-
-.flexo-people__employees-employee-position-name-container {
-display: flex;
-flex-direction: column;
-padding-top: 20px;
-}
-
-.flexo-people__employees--employee-img {
   width: 68px;
   border-radius: 50%;
   height: 68px;
+  overflow: hidden;
+}
+
+.flexo-people__employees-employee-position-name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexo-people__employees--employee-img {
+  height: 100%;
+  width: auto;
 }
 
 .flexo-people__employees-employee-position {
@@ -34,7 +40,7 @@ padding-top: 20px;
   font-weight: 500;
   letter-spacing: 2px;
   line-height: 13px;
-
+  margin-bottom: 8px;
 }
 
 .flexo-people__employees-employee-name {
@@ -45,13 +51,12 @@ padding-top: 20px;
   font-weight: bold;
 }
 
-
 .flexo-people__employees-employee-info {
   width: 100%;
   color: $mainText;
   font-family: $fontRoboto;
-  font-size: 12px;
-  line-height: 26px;
-  margin-bottom: 31px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
   margin-top: 10px;
 }
