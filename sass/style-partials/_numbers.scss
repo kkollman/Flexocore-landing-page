@@ -13,6 +13,34 @@
     justify-content: center;
     flex-flow: column wrap;
     align-items: center;
+    cursor: pointer;
+
+    &:hover {
+
+      .flexo-rolled-divider {
+        width: 20%;
+      }
+
+      .flexo-numbers__number {
+        border: none;
+        background-color: $contrast;
+        color: $mainBlue;
+        animation-name: pulse;
+        animation-duration: 0.8s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        font-size: 30px;
+
+        &:before {
+          background-color: transparent;
+          height: 95px;
+          width: 95px;
+          top: 4px;
+          left: 4px;
+          border: 3px solid $mainBlue;
+        }
+      }
+    }
   }
 
   &__number {
@@ -29,12 +57,13 @@
     align-items: center;
     position: relative;
     transition: all 0.3s;
+    margin-bottom: 22px;
+    cursor: pointer;
 
     &:before {
       position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: -8px;
+      left: 42px;
       content: '';
       display: block;
       height: 16px;
@@ -42,21 +71,7 @@
       background-color: $contrast;
       border-radius: 50%;
       transition: all 0.6s;
-    }
-
-    &:hover {
-      border: none;
-      background-color: $contrast;
-      color: $mainBlue;
-      font-size: 20px;
-      transform: scale(1.1);
-      margin: 10px;
-      //tu trzeba wykombinowac tak, zeby pozycja befora byla ustalana bez wykorzystania transformu - transform ma dzialac tylko przy animacji
-
-      &:before {
-        background-color: $mainBlue;
-        animation: rotate 3s infinite linear;
-      }
+      text-align: center;
     }
   }
 
@@ -69,7 +84,20 @@
   }
 
   &__description {
+    margin-bottom: 30px;
     max-width: 156px;
     text-align: center;
+    font-weight: 300;
   }
+}
+
+.flexo-rolled-divider {
+  width: 0;
+  height: 3px;
+  background-color: $contrast;
+  display: inline;
+  transition: all 0.6s;
+  margin-top: 5px;
+  margin-bottom: 22px;
+
 }

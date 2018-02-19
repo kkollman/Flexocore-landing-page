@@ -19,6 +19,10 @@ body {
   background-color: $separatorColor;
   opacity: 0.2;
   width: 100%;
+
+  &.--short {
+    width: 25%;
+  }
 }
 
 a {

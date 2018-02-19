@@ -1,6 +1,11 @@
 @import "_colors.scss";
 @import "_variables.scss";
 
+.flexo-people {
+  padding-top: 40px;
+}
+
+
 .flexo-people__employees--employee-header {
   display: flex;
   flex-direction: row;

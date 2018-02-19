@@ -1,0 +1,79 @@
+@import "colors";
+
+.flexo-contact {
+
+  &__wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  &__header {
+    color: $mainText;
+    font-family: $fontLehigh;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 17px;
+  }
+
+
+  &__story {
+    font-family: $fontRoboto;
+    font-weight: 300;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    color: $mainText;
+    margin: 17px auto;
+  }
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid $inputBorder;
+    font-family: $fontRoboto;
+    color: $mainText;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 17px 15px;
+    margin-bottom: 16px;
+
+    &::placeholder {
+      color: #BDC6CD;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $inputBorder;
+    font-family: $fontRoboto;
+    color: $mainText;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 17px 15px;
+    resize: none;
+  }
+
+  &__button {
+    margin-top: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: $mainBlue;
+    color: $contrast;
+    padding: 18px 28px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: $fontRoboto;
+    font-weight: 500;
+    line-height: 16px;
+
+    svg {
+      margin-left: 40px;
+    }
+  }
+}
