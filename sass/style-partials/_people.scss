@@ -13,6 +13,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @include tablet {
+    align-items: flex-end;
+  }
 }
 
 .flexo-people__employees--employee-img-container {
@@ -21,6 +25,11 @@
   border-radius: 50%;
   height: 68px;
   overflow: hidden;
+
+  @include tablet {
+    height: 120px;
+    width: 120px;
+  }
 }
 
 .flexo-people__employees-employee-position-name-container {
@@ -49,6 +58,11 @@
   color: $mainText;
   font-family: $headerFont;
   font-weight: bold;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .flexo-people__employees-employee-info {

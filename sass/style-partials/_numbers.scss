@@ -22,6 +22,7 @@
     flex-flow: column wrap;
     align-items: center;
     cursor: pointer;
+    transition: .3s;
 
     @media (min-width: 580px) {
       max-width: 162px;
@@ -34,6 +35,7 @@
     }
 
     &:hover {
+      transform: scale(1.1);
 
       .flexo-rolled-divider {
         width: 20%;

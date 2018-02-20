@@ -1,7 +1,7 @@
 .flexo-information {
-  margin-bottom: 20px;
   background-color: $contrast;
   padding-top: 35px;
+  padding-bottom: 30px;
 }
 
 .flexo-information__container {
@@ -20,37 +20,33 @@
   color: $mainText;
   line-height: 36px;
   font-family: $headerFont;
-  font-weight: bold;
-  margin-top: 40px;
-  margin-left: 51px;
-}
-
-.flexo-information__marks-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  flex-grow: 2;
+  margin-left: 95px;
+  margin-bottom: 20px;
 }
 
 .flexo-information_details-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: $fontRoboto;
+  font-weight: 300;
   margin-left: 31px;
+  margin-left: 95px;
 
   p {
-    margin: 15px 0 5px;
+    margin-bottom: 40px;
   }
 }
 
-.flexo-information__marks-container-map {
+.flexo-information__item {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  position: relative;
+}
+
+.flexo-icon {
+  position: absolute;
+  left: -33px;
   margin-top: 5px;
-}
-
-.flexo-information__marks-container-tel {
-  margin-top: 110px;
-}
-
-.flexo-information__marks-container-mail {
-  margin-top: 39px;
 }

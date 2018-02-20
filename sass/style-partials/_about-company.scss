@@ -26,6 +26,11 @@
   line-height: 26px;
   margin-bottom: 31px;
   font-weight: 300;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 30px;
+  }
 }
 
 .flexo-about__header{
