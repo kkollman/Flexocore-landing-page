@@ -21,12 +21,13 @@ body {
 
   @include desktop {
     margin: 0 auto;
-    max-width: 540px;
+    width: 90%;
+    max-width: 1128px;
   }
 }
 
 .flexo-separator {
-  height: 1px;
+  min-height: 1px;
   background-color: $separatorColor;
   opacity: 0.2;
   width: 100%;
@@ -43,4 +44,22 @@ body {
 
 a {
   text-decoration: none;
+}
+
+
+.mobile {
+  @include desktop {
+    display: none !important;
+  }
+}
+
+.desktop {
+
+  @media (max-width: $desktop) {
+    display: none !important;
+  }
+
+  @include desktop {
+    display: inherit;
+  }
 }

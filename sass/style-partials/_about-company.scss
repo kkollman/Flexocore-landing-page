@@ -33,6 +33,10 @@
   }
 }
 
+.flexo-about__header--into {
+  margin-bottom: 60px;
+}
+
 .flexo-about__header{
   margin: 40px 0;
   background-image: url("../media/images/flexocore_loop.svg");
@@ -42,6 +46,13 @@
 
   @include tablet {
     margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 840px;
+    padding: 95px 140px 65px;
   }
 }
 
