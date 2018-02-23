@@ -2,6 +2,12 @@
   background-color: $contrast;
   padding-top: 35px;
   padding-bottom: 30px;
+  border-radius: 4px;
+
+  @include desktop {
+    flex: 2;
+    align-self: flex-start;
+  }
 }
 
 .flexo-information__container {
@@ -22,6 +28,10 @@
   font-family: $headerFont;
   margin-left: 95px;
   margin-bottom: 20px;
+
+  @include desktop {
+    margin-left: 60px;
+  }
 }
 
 .flexo-information_details-container {
@@ -30,11 +40,14 @@
   justify-content: space-between;
   font-family: $fontRoboto;
   font-weight: 300;
-  margin-left: 31px;
   margin-left: 95px;
 
   p {
     margin-bottom: 40px;
+  }
+
+  @include desktop {
+    margin-left: 60px;
   }
 }
 

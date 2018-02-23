@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
      document.querySelector('body').classList.toggle('menu-open')
   }
 
-  hamburgerButtons.forEach(button => button.addEventListener('click', () => toggleMenu()));
-
-
+  hamburgerButtons.forEach(button => button.addEventListener('click', () => toggleMenu()))
 
   //add on-scroll class to topbar
 
@@ -27,4 +25,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.addEventListener('scroll', () => toggleFloatingBar())
 
+
+  let languageDropdown = document.querySelector('#language-dropdown')
+
+  let languageDropdownButton = document.querySelector('#language-dropdown-button')
+
+  languageDropdownButton.addEventListener('click', () => languageDropdown.classList.toggle('open'))
+
+  zenscroll.setup(null, 100)
   });
+
+

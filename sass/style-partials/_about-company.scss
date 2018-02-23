@@ -1,5 +1,6 @@
-@import "style-partials/_colors.scss";
-@import "style-partials/_variables.scss";
+@import "_colors.scss";
+@import "_variables.scss";
+
 .flexo-about__header--title,
 .flexo-about__company-offer--title {
   font-size: 22px;
@@ -51,8 +52,9 @@
   @include desktop {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
     max-width: 840px;
-    padding: 95px 140px 65px;
+    padding: 95px 150px 65px;
   }
 }
 
@@ -62,11 +64,32 @@
   @include tablet {
     margin-bottom: 80px;
   }
+
+  @include desktop {
+    display: flex;
+    flex-flow: row wrap;
+  }
 }
 
-.flexo-about__company-offer--img {
+.flexo-about__company-offer-image {
   width: 100%;
   height: auto;
+  overflow: hidden;
+  max-height: 165px;
+
+  img {
+    width: 100%;
+  }
+
+  @include tablet {
+    max-height: 270px;
+  }
+
+  @include desktop {
+    flex: 1;
+    order: 1;
+    max-height: 276px;
+  }
 }
 
 .flexo-about__company-offer-category {
@@ -82,6 +105,10 @@
     margin-top: 30px;
     margin-bottom: 6px;
   }
+
+  @include desktop {
+    margin-top: 0;
+  }
 }
 
 .flexo-about__company-offer--title {
@@ -94,5 +121,15 @@
 
   &__header-separator{
     margin: 40px auto;
+  }
+}
+
+.flexo-about__info {
+
+  @include desktop {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    padding-right: 30px;
   }
 }

@@ -8,7 +8,6 @@ body.menu-open {
   }
 }
 
-
 .flexo-modal {
   overflow-y: scroll;
   height: 0;
@@ -49,7 +48,6 @@ body.menu-open {
     justify-content: center;
   }
 }
-
 
 .flexo-topbar {
   position: fixed;
@@ -96,13 +94,58 @@ body.menu-open {
     transition: all .3s;
   }
 
-  &__menu-languages {
-    display: none;
+  //&__menu-languages {
+  //  display: none;
+  //}
+
+  &__menu-language-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .flexo-menu__language-list-element {
+    margin-left: 24px;
+    position: relative;
+    left: -5px;
+    cursor: pointer;
+    color: $mainText;
+    transition: all .3s;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border: 3px solid transparent;
+      border-top: 3px solid $mainText;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -10px;
+    }
+  }
+
+  .flexo-topbar__menu-languages {
+    height: 0;
+    transition: all .3s;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+
+    &.open {
+      height: 65px;
+    }
+
+    .flexo-menu-list-element {
+      color: $mainText;
+      margin: 5px;
+    }
   }
 
   &.floating {
     background-color: $mainBlue;
-    box-shadow: 0 14px 11px -12px rgba(0,0,0,0.2);
+    box-shadow: 0 14px 11px -12px rgba(0, 0, 0, 0.2);
 
     path {
       fill: white !important;
@@ -118,6 +161,22 @@ body.menu-open {
 
     .flexo-topbar__menu-list-element {
       color: $contrast;
+    }
+
+    .flexo-menu__language-list-element {
+      color: $contrast;
+
+      &:after {
+        border-top: 3px solid $contrast;
+      }
+    }
+
+    .flexo-menu-list-element {
+      color: $contrast;
+    }
+
+    .flexo-topbar__menu-languages {
+      background: #0F6AE6;
     }
   }
 }

@@ -3,8 +3,16 @@
 .flexo-contact {
 
   @include tablet {
-    margin-top: 80px;
     margin-bottom: 80px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+    flex: 3;
   }
 
   &__wrapper {
@@ -26,6 +34,10 @@
     @include tablet {
       font-size: 36px;
     }
+
+    @include desktop {
+      margin-bottom: 44px;
+    }
   }
 
 
@@ -37,6 +49,10 @@
     line-height: 30px;
     color: $mainText;
     margin: 17px auto;
+
+    @include tablet {
+      margin-top: 0;
+    }
   }
 
   &__input {
@@ -93,5 +109,15 @@
       font-size: 16px;
       line-height: 19px;
     }
+  }
+}
+
+.flexo-info {
+
+  @include desktop {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1128px;
   }
 }

@@ -3,10 +3,24 @@
 
 .flexo-people {
   padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.flexo-people__container {
+  @include desktop {
+    display: flex;
+  }
 }
 
 .flexo-people__employees {
   margin-bottom: 40px;
+
+  @include desktop {
+    flex: 1;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
 
 .flexo-people__employees--employee-header {
@@ -29,6 +43,10 @@
   @include tablet {
     height: 120px;
     width: 120px;
+  }
+
+  @include desktop {
+    margin-right: 25px;
   }
 }
 
