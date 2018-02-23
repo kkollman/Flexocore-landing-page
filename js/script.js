@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
   //add onclick handler to open sidemenu
   const hamburgerButtons = document.querySelectorAll('.hamburger')
 
+  const modalMenuElements = document.querySelectorAll('.flexo-modal__menu-element')
 
-  const toggleMenu = function () {
-     document.querySelector('body').classList.toggle('menu-open')
-  }
+  hamburgerButtons.forEach(button => button.addEventListener('click', () => document.querySelector('body').classList.toggle('menu-open')))
 
-  hamburgerButtons.forEach(button => button.addEventListener('click', () => toggleMenu()))
+
+  modalMenuElements.forEach(element => element.addEventListener('click', () => document.querySelector('body').classList.remove('menu-open')))
 
   //add on-scroll class to topbar
 

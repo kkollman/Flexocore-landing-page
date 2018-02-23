@@ -2,28 +2,29 @@
 <html>
   <head>
     <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Flexocore</title><link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin-ext" rel="stylesheet">
-      <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-      <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-      <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="media/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="media/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="media/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="media/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="media/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="media/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="media/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="media/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="media/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="media/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="media/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
       <link rel="manifest" href="/manifest.json">
       <meta name="msapplication-TileColor" content="#ffffff">
-      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="msapplication-TileImage" content="media/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-  <section class="flexo__nav">
+  <section class="flexo__nav" id="top">
       <div class="flexo-modal__hamburger hamburger mobile">
           <div class="hamburger-icon">
               <div class="hamburger-icon__stripe" id="stripe-one"></div>
@@ -35,10 +36,10 @@
           <section class="flexo-modal mobile">
               <div class="container">
                   <div class="flexo-modal__menu">
-                      <a href="#"><div class="flexo-modal__menu-element">Firma</div></a>
-                      <a href="#"><div class="flexo-modal__menu-element">Oferta</div></a>
-                      <a href="#"><div class="flexo-modal__menu-element">O nas</div></a>
-                      <a href="#"><div class="flexo-modal__menu-element">Kontakt</div></a>
+                      <a href="#company"><div class="flexo-modal__menu-element">Firma</div></a>
+                      <a href="#offer"><div class="flexo-modal__menu-element">Oferta</div></a>
+                      <a href="#about"><div class="flexo-modal__menu-element">O nas</div></a>
+                      <a href="#contact"><div class="flexo-modal__menu-element">Kontakt</div></a>
                       <div class="flexo-separator"></div>
                       <div class="flexo-modal__menu-language-header flexo-modal__menu-element">
                           <img src="media/icons/globe.svg" class="language-header__icon" alt="Globe icon">
@@ -52,14 +53,16 @@
           </section>
           <div class="flexo-topbar__container">
               <nav class="flexo-topbar__menu">
-                  <div class="flexo-topbar__menu-element --logo">
-                      <svg width="124" height="16" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><path d="M74.11 15.908a7.945 7.945 0 1 1 6.985-11.816l-2.812 1.57a4.726 4.726 0 1 0-4.185 7.027h.296a5.902 5.902 0 0 0 2.744-.75c1.231-.69 2.579-1.92 3.527-4.628 1.083-3.17 2.843-5.102 4.59-6.154A8.363 8.363 0 0 1 89.471 0H90a7.95 7.95 0 1 1-7.034 11.834l2.806-1.57a4.732 4.732 0 1 0 4.634-7.033c-.068 0-.394-.037-.714-.037-.32 0-.615.037-.707.05a5.163 5.163 0 0 0-2.099.713c-1.083.652-2.301 1.846-3.194 4.418-1.15 3.379-3.132 5.373-5.009 6.394a9.065 9.065 0 0 1-4.308 1.151h-.283l.019-.012zM102.406 7.686h2.659c1.649 0 2.424-1.07 2.424-2.21 0-1.138-.794-2.233-2.424-2.233h-2.659V7.686zm5.428 7.79l-2.985-5.125h-2.461v5.126h-2.985V.462h5.255c3.693 0 5.896 1.993 5.896 5.021a4.375 4.375 0 0 1-2.83 4.308l3.433 5.686h-3.348.025zM123.286 12.683v2.788h-10.75V.455h10.62v2.788h-7.636v3.2h6.025v2.615h-6.025v3.625h7.766z" fill="#0F6AE6"/><path fill="#161412" d="M3.01 3.194v3.704h5.864V9.6H3.009v5.932H0V.375h10.498v2.819H3.01zM22.695 12.72v2.812H12.197V.375h3.01V12.72h7.488zM35.206 12.72v2.812h-10.85V.375h10.715v2.819h-7.705v3.224h6.086v2.64h-6.086v3.662h7.84zM43.495 10.295s-.849 1.397-1.107 1.797l-2.425 3.446H36.37l5.305-7.772L36.677.382h3.612l2.339 3.489c.221.344.849 1.47.867 1.47 0 0 .616-1.126.843-1.47L46.677.38h3.661l-5.021 7.385 5.305 7.772h-3.6l-2.425-3.446c-.29-.4-1.065-1.797-1.083-1.797h-.019z"/><path d="M57.23 12.801c2.795 0 4.74-2.012 4.74-4.923 0-2.91-1.945-4.923-4.74-4.923-2.793 0-4.72 1.994-4.72 4.923 0 2.93 1.952 4.923 4.72 4.923zm0-12.8a7.748 7.748 0 0 1 7.878 7.883 7.87 7.87 0 0 1-15.742 0A7.73 7.73 0 0 1 57.231.001z" fill="#161412"/></g></svg>
-                  </div>
+                  <a href="#top">
+                      <div class="flexo-topbar__menu-element --logo">
+                          <svg width="124" height="16" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><path d="M74.11 15.908a7.945 7.945 0 1 1 6.985-11.816l-2.812 1.57a4.726 4.726 0 1 0-4.185 7.027h.296a5.902 5.902 0 0 0 2.744-.75c1.231-.69 2.579-1.92 3.527-4.628 1.083-3.17 2.843-5.102 4.59-6.154A8.363 8.363 0 0 1 89.471 0H90a7.95 7.95 0 1 1-7.034 11.834l2.806-1.57a4.732 4.732 0 1 0 4.634-7.033c-.068 0-.394-.037-.714-.037-.32 0-.615.037-.707.05a5.163 5.163 0 0 0-2.099.713c-1.083.652-2.301 1.846-3.194 4.418-1.15 3.379-3.132 5.373-5.009 6.394a9.065 9.065 0 0 1-4.308 1.151h-.283l.019-.012zM102.406 7.686h2.659c1.649 0 2.424-1.07 2.424-2.21 0-1.138-.794-2.233-2.424-2.233h-2.659V7.686zm5.428 7.79l-2.985-5.125h-2.461v5.126h-2.985V.462h5.255c3.693 0 5.896 1.993 5.896 5.021a4.375 4.375 0 0 1-2.83 4.308l3.433 5.686h-3.348.025zM123.286 12.683v2.788h-10.75V.455h10.62v2.788h-7.636v3.2h6.025v2.615h-6.025v3.625h7.766z" fill="#0F6AE6"/><path fill="#161412" d="M3.01 3.194v3.704h5.864V9.6H3.009v5.932H0V.375h10.498v2.819H3.01zM22.695 12.72v2.812H12.197V.375h3.01V12.72h7.488zM35.206 12.72v2.812h-10.85V.375h10.715v2.819h-7.705v3.224h6.086v2.64h-6.086v3.662h7.84zM43.495 10.295s-.849 1.397-1.107 1.797l-2.425 3.446H36.37l5.305-7.772L36.677.382h3.612l2.339 3.489c.221.344.849 1.47.867 1.47 0 0 .616-1.126.843-1.47L46.677.38h3.661l-5.021 7.385 5.305 7.772h-3.6l-2.425-3.446c-.29-.4-1.065-1.797-1.083-1.797h-.019z"/><path d="M57.23 12.801c2.795 0 4.74-2.012 4.74-4.923 0-2.91-1.945-4.923-4.74-4.923-2.793 0-4.72 1.994-4.72 4.923 0 2.93 1.952 4.923 4.72 4.923zm0-12.8a7.748 7.748 0 0 1 7.878 7.883 7.87 7.87 0 0 1-15.742 0A7.73 7.73 0 0 1 57.231.001z" fill="#161412"/></g></svg>
+                      </div>
+                  </a>
                   <div class="flexo-topbar__menu-element flexo-topbar__menu-list desktop">
                       <a href="#company"><div class="flexo-topbar__menu-list-element">Firma</div></a>
                       <a href="#offer"><div class="flexo-topbar__menu-list-element">Oferta</div></a>
-                      <a href="#"><div class="flexo-topbar__menu-list-element">O nas</div></a>
-                      <a href="#"><div class="flexo-topbar__menu-list-element">Kontakt</div></a>
+                      <a href="#about"><div class="flexo-topbar__menu-list-element">O nas</div></a>
+                      <a href="#contact"><div class="flexo-topbar__menu-list-element">Kontakt</div></a>
                       <div class="flexo-topbar__menu-language-header flexo-topbar__menu-list-element" id="language-dropdown-button">
                           <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M15.9 15.39c-.26-.8-1.01-1.39-1.9-1.39h-1v-3a1 1 0 0 0-1-1H6V8h2a1 1 0 0 0 1-1V5h2a2 2 0 0 0 2-2v-.41a7.984 7.984 0 0 1 2.9 12.8zM9 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.22.21-1.79L7 13v1a2 2 0 0 0 2 2v1.93zM10 0C4.477 0 0 4.477 0 10A10 10 0 1 0 10 0z" fill="#666" fill-rule="nonzero"/></svg>
                           <div class="flexo-languages">
@@ -85,11 +88,10 @@
     <section class="flexo-about" id="company">
         <div class="container">
                 <div class="flexo-about__header">
-                    <h2 class="flexo-about__header--title">Nasza firma</h2>
-                    <p class="flexo-about__header--into">Flexcore oferuje szeroki zakres usług. Od przygotowania projektów do druku aż do wykonania gotowego opakowania. Wyróżnia nas wieloletnie doświadczenie w druku fleksograficznym, które w połączeniu z wykorzystaniem profesjonalnych narzędzi pre-press
-                        gwarantuje najwyższą jakość efektu końcowego. </p>
+                    <h2 class="flexo-about__header--title">Firma</h2>
+                    <p class="flexo-about__header--into">Firma Flexocore została założona z pasji do druku i tworzenia najlepszych rozwiązań dla klientów, przez Inżyniera z wieloletnim doświadczeniem zdobytym w drukarniach w Europie. Dzięki nowoczesnym technologiom i wysokiej jakości materiałom, tworzymy coś więcej niż projekty. Tworzymy idee i przelewamy je na gotowe produkty i rozwiązania, czyniąc naszą pracę sztuką.
+                    </p>
                     <div class="flexo-separator flexo-about__header-separator"></div>
-
                 </div>
             <div class="flexo-about__company-offer" id="offer">
                 <div class="flexo-about__company-offer-image">
@@ -98,48 +100,84 @@
                 <div class="flexo-about__info">
                     <div class="flexo-about__company-offer-category">OFERTA</div>
                     <h2 class="flexo-about__company-offer--title">Projektowanie</h2>
-                    <p class="flexo-about__company-offer--text">Flexcore oferuje szeroki zakres usług. Od przygotowania projektów do druku aż do wykonania gotowego opakowania. Wyróżnia nas wieloletnie doświadczenie w druku fleksograficznym, które w połączeniu z wykorzystaniem profesjonalnych narzędzi pre-press
-                        gwarantuje najwyższą jakość efektu końcowego. </p>
+                    <p class="flexo-about__company-offer--text">Kreujemy logotypy i tworzymy grafiki do pojedynczych opakowań lub całych serii z zachowaniem spójnego wyglądu i estetyki. Zaakceptowane wzory są od początku przygotowywane z myślą o druku i formowaniu opakowania, dlatego nasze projekty uwzględniają poszczególne elementy wynikające z technologicznych procesów produkcji. Inaczej mówiąc: myślimy o wszystkim.
+                    </p>
                 </div>
                 </div>
+            <div class="flexo-about__company-offer" id="offer">
+                <div class="flexo-about__company-offer-image">
+                    <img src="images/sample.png" alt="" >
+                </div>
+                <div class="flexo-about__info">
+                    <div class="flexo-about__company-offer-category">OFERTA</div>
+                    <h2 class="flexo-about__company-offer--title">Studio reprograficzne</h2>
+                    <p class="flexo-about__company-offer--text">Zespół operatorów przy wykorzystaniu specjalistycznego oprogramowania opracowuje pliki graficzne w taki sposób, by po wydruku jak najwierniej odzwierciedlić kolorystykę wzoru klienta. Krzyżowe kontrole prac oraz profesjonalne wydruki proof pozwalają w pełni kontrolować proces od otrzymania plików danych, do momentu produkcji form drukowych.
+                    </p>
+                </div>
+            </div>
+            <div class="flexo-about__company-offer" id="offer">
+                <div class="flexo-about__company-offer-image">
+                    <img src="images/sample.png" alt="" >
+                </div>
+                <div class="flexo-about__info">
+                    <div class="flexo-about__company-offer-category">OFERTA</div>
+                    <h2 class="flexo-about__company-offer--title">Formy drukowe</h2>
+                    <p class="flexo-about__company-offer--text">Jednym z najważniejszych elementów w druku fleksograficznym są formy drukowe (płaskie oraz bezkońcowe). Dedykujemy do druku matryce produkowane w wielokrotnie nagradzanej technologii Kodak Flexcel NX.
+                        Zdobyte doświadczenie, pozwoliło nam uzyskać doskonałe rezultaty w jakości druku i dokładności odwzorowania projektów zarówno przy krótkich seriach, jak i drukach wielonakładowych. Płyty dostarczamy w ciągu 24 godzin od akceptacji wydruku proof.
+
+                    </p>
+                </div>
+            </div>
+            <div class="flexo-about__company-offer" id="offer">
+                <div class="flexo-about__company-offer-image">
+                    <img src="images/sample.png" alt="" >
+                </div>
+                <div class="flexo-about__info">
+                    <div class="flexo-about__company-offer-category">OFERTA</div>
+                    <h2 class="flexo-about__company-offer--title">Opakowania</h2>
+                    <p class="flexo-about__company-offer--text">Produkt finalny. Zwieńczenie pracy mnóstwa osób i efekt końcowy wielu złożonych procesów. Dostarczamy klientom opakowania miękkie z odpowiednich dla zawartości laminatów folii, w wybranym formacie i wzorcu oraz właściwymi dodatkami. Prócz jakości wykonania oraz ładnego wyglądu na półce, opakowania mają za zadanie spełniać funkcje bariery, łatwo się otwierać i ponownie zamykać, a także być wytrzymałe.
+                        Pomagamy dopasować technologię do produkt, dopilnowując proces powstawania opakowania na każdym etapie jego tworzenia.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="flexo-numbers">
+    <section class="flexo-numbers" id="about">
         <div class="container flexo-numbers__container">
             <div class="flexo-numbers__item">
                 <div class="flexo-numbers__number">
-                    300
+                    2500
                 </div>
-                <span class="flexo-numbers__title">
-                projektów
-                </span>
+                <!--<span class="flexo-numbers__title">-->
+                <!--projektów-->
+                <!--</span>-->
                 <div class="flexo-rolled-divider"></div>
                 <p class="flexo-numbers__description">
-                    To nasz personalny rekord. Tyle projektów jesteśmy w stanie zrealizować w ciągu jednego miesiąca!
+                    Tyle projektów realizujemy w ciągu roku
                 </p>
             </div>
             <div class="flexo-numbers__item">
                 <div class="flexo-numbers__number">
                     2 mln
                 </div>
-                <span class="flexo-numbers__title">
-                 opakowań
-                </span>
+                <!--<span class="flexo-numbers__title">-->
+                 <!--opakowań-->
+                <!--</span>-->
                 <div class="flexo-rolled-divider"></div>
                 <p class="flexo-numbers__description">
-                    Średnio tyle opakowań produkujemy dla naszych klientów co miesiąc!
+                    Tyle opakowań trafia do naszych klientów każdego miesiąca
                 </p>
             </div>
             <div class="flexo-numbers__item">
                 <div class="flexo-numbers__number">
                     500
                 </div>
-                <span class="flexo-numbers__title">
-                klientów
-            </span>
+                <!--<span class="flexo-numbers__title">-->
+                <!--klientów-->
+            <!--</span>-->
                 <div class="flexo-rolled-divider"></div>
                 <p class="flexo-numbers__description">
-                    Od początku naszego istnienia właśnie tylu klientów nam zaufało. Dziękujemy!
+                    Tylu klientów zaufało naszym usługom
                 </p>
             </div>
         </div>
@@ -149,40 +187,39 @@
                 <div class="flexo-people__employees">
                     <div class="flexo-people__employees--employee-header">
                         <div class="flexo-people__employees--employee-img-container">
-                            <img src="./images/stock-photo-portrait-of-middle-aged-man-556638379.jpg" alt="" class="flexo-people__employees--employee-img">
+                            <img src="./media/images/rafal.png" alt="" class="flexo-people__employees--employee-img">
                         </div>
                         <div class="flexo-people__employees-employee-position-name-container">
-
-                            <span class="flexo-people__employees-employee-position">CEO</span>
-                            <h2 class="flexo-people__employees-employee-name">Rafał Kowalski</h2>
+                            <span class="flexo-people__employees-employee-position">core</span>
+                            <h2 class="flexo-people__employees-employee-name">Rafał Korolkiewicz</h2>
                         </div>
                     </div>
-                    <p class="flexo-people__employees-employee-info">Flexcore oferuje szeroki zakres usług. Od przygotowania projektów do druku aż do wykonania gotowego opakowania. Wyróżnia nas wieloletnie doświadczenie w druku fleksograficznym, które w połączeniu z wykorzystaniem profesjonalnych narzędzi pre-press
-                        gwarantuje najwyższą.</p>
+                    <p class="flexo-people__employees-employee-info">Lubię działać szybko i precyzyjnie. Lubię też wiedzieć jak działają maszyny i urządzenia lub dlaczego nie działają :). W pracy planuję zadania i koncentruję się na celu. Interesują mnie konkretne rozwiązania. Prywatnie, moją pasją są biegi długodystansowe, które trenuję nieprzerwanie od kilku lat. Nigdy się nie poddaję.</p>
                 </div>
             <div class="flexo-people__employees">
                 <div class="flexo-people__employees--employee-header">
                     <div class="flexo-people__employees--employee-img-container">
-                        <img src="./images/stock-photo-portrait-of-middle-aged-man-556638379.jpg" alt="" class="flexo-people__employees--employee-img">
+                        <img src="./media/images/pawel.png" alt="" class="flexo-people__employees--employee-img">
                     </div>
                     <div class="flexo-people__employees-employee-position-name-container">
 
-                        <span class="flexo-people__employees-employee-position">CEO</span>
-                        <h2 class="flexo-people__employees-employee-name">Rafał Kowalski</h2>
+                        <span class="flexo-people__employees-employee-position">flexo</span>
+                        <h2 class="flexo-people__employees-employee-name">Paweł Różański</h2>
                     </div>
                 </div>
-                <p class="flexo-people__employees-employee-info">Flexcore oferuje szeroki zakres usług. Od przygotowania projektów do druku aż do wykonania gotowego opakowania. Wyróżnia nas wieloletnie doświadczenie w druku fleksograficznym, które w połączeniu z wykorzystaniem profesjonalnych narzędzi pre-press
-                    gwarantuje najwyższą.</p>
+                <p class="flexo-people__employees-employee-info">Lubię poznawać ludzi i świat. Lubię czerpać pomysły z książek i otoczenia pełnego ciekawych zdarzeń. Biuro jest dla mnie przestrzenią kreatywnego działania. Praca jest wspaniałym uzupełnieniem życia. W wolnym czasie skupiam się na treningu funkcjonalnym oraz core. Upór jest moją siłą.</p>
             </div>
         </div>
     </section>
-  <section>
+  <section id="contact">
       <h2 class="header flexo-contact__header">
           Skontaktuj się z nami
       </h2>
       <div class="flexo-separator --short"></div>
       <p class="flexo-contact__story">
-          We are here to help. Want to learn more about our services?<br> Please get in touch, we'd love to hear from you!
+          Masz pytania o nasze usługi?<br>
+          Zadzwoń, napisz, odwiedź nas - chętnie udzielimy informacji.
+
       </p>
       <div class="flexo-info">
           <section class="flexo-contact">
