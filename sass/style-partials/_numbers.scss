@@ -34,6 +34,11 @@
       }
     }
 
+    @include desktop {
+      margin: 0 10px;
+      max-width: 378px;
+    }
+
     &:hover {
       transform: scale(1.1);
 
@@ -58,6 +63,13 @@
           top: 4px;
           left: 4px;
           border: 3px solid $mainBlue;
+
+          @include desktop {
+            top: 6px;
+            left: 6px;
+            height: 160px;
+            width: 160px;
+          }
         }
       }
     }
@@ -92,6 +104,21 @@
       transition: all 0.6s;
       text-align: center;
     }
+
+    @include desktop {
+      height: 178px;
+      width: 178px;
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 2px;
+
+      &:before {
+        height: 28px;
+        width: 28px;
+        top: -15px;
+        left: 73px;
+      }
+    }
   }
 
   &__title {
@@ -100,6 +127,10 @@
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 30px;
+
+    @include desktop {
+      font-size: 24px;
+    }
   }
 
   &__description {
@@ -110,6 +141,12 @@
 
     @include tablet {
       line-height: 22px;
+    }
+
+    @include desktop {
+      max-width: 378px;
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 }

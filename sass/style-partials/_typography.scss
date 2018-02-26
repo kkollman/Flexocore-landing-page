@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Avenir LT Std';
-  src: url('../media/fonts/AvenirLTStd-Black.woff2') format('woff2'),
-  url('../media/fonts/AvenirLTStd-Black.woff') format('woff');
-  font-weight: 900;
+  font-family: 'Avenir Next LT Pro';
+  src: url('../media/fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+  url('../media/fonts/AvenirNextLTPro-Bold.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -17,7 +17,7 @@
 
 $sansSerifFont: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 $headerFont: 'Lehigh Personal', serif;
-$titleFont: 'Avenir LT Std', 'Helvetica', 'Arial', sans-serif;
+$titleFont: 'Avenir Next LT Pro', 'Helvetica', 'Arial', sans-serif;
 
 $fontLehigh: 'Lehigh Personal', Georgia, "Times New Roman", sans-serif;
 
@@ -31,6 +31,5 @@ $fontRoboto: 'Roboto', Helvetica, Arial, sans-serif;
   color: #FFFFFF;
   text-align: center;
   font-family: $titleFont;
-  font-weight: 900;
-  font-size: 50px;
+  font-size: 70px;
 }

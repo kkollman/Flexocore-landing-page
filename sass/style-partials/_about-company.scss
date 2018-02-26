@@ -73,22 +73,35 @@
 
 .flexo-about__company-offer-image {
   width: 100%;
-  height: auto;
   overflow: hidden;
-  max-height: 165px;
-
-  img {
-    width: 100%;
-  }
+  height: 165px;
+  background-size: cover;
+  background-position: center;
 
   @include tablet {
-    max-height: 270px;
+    height: 270px;
   }
 
   @include desktop {
     flex: 1;
     order: 1;
-    max-height: 276px;
+    height: 276px;
+  }
+
+  &.flexo-about-1 {
+    background-image: url("../media/images/flexocore_1.jpg");
+  }
+
+  &.flexo-about-2 {
+    background-image: url("../media/images/flexocore_2.jpg");
+  }
+
+  &.flexo-about-3 {
+    background-image: url("../media/images/flexocore_3.jpg");
+  }
+
+  &.flexo-about-4 {
+    background-image: url("../media/images/flexocore_4.jpg");
   }
 }
 

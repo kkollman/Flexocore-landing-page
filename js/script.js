@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   languageDropdownButton.addEventListener('click', () => languageDropdown.classList.toggle('open'))
 
-  zenscroll.setup(null, 100)
+  zenscroll.setup(null, 80)
   });
 
 
