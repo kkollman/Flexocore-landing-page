@@ -48,6 +48,10 @@ body {
   }
 }
 
+.flexo-topbar.floating .flexo-modal__menu .flexo-separator {
+  display: block;
+}
+
 a {
   text-decoration: none;
 }

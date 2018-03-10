@@ -16,3 +16,9 @@ $smallDesktop: 768px;
     @content;
   }
 }
+
+@mixin smallDesktop {
+  @media (min-width: $smallDesktop) {
+    @content;
+  }
+}

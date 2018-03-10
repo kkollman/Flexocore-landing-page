@@ -1,9 +1,23 @@
+
+<?php
+if(isset($_POST['submit'])){
+    $to = "biuro@flexocore.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $subject = "Wiadomość ze strony Flexocore";
+    $message = "Wiadomość wysłana przez " . $name . ", numer telefonu: " . $last_name . " Treść wiadomości:" . "\n\n" . $_POST['message'];
+    $headers = "From:" . $from;
+    mail($to,$subject,$message,$headers);
+    $mailSent = "Dziękujemy za wiadomość, postaramy się z Tobą skontaktować jak najszybciej.";
+    }
+?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flexocore</title><link rel="stylesheet" href="css/style.css">
+    <title>Flexocore – Sedno druku i opakowań</title><link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&amp;subset=latin-ext" rel="stylesheet">
       <link rel="apple-touch-icon" sizes="57x57" href="media/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="media/apple-icon-60x60.png">
@@ -22,8 +36,12 @@
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" content="media/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
+      <meta name="description" content="Firma Flexocore została założona z pasji do druku i tworzenia najlepszych rozwiązań dla klientów. Dzięki nowoczesnym technologiom i wysokiej jakości materiałom, tworzymy coś więcej niż projekty.">
   </head>
   <body>
+  <?php if($mailSent) : ?>
+    <div class="flexo-thankyou"><?=$mailSent ?></div>
+  <?php endif; ?>
   <section class="flexo__nav" id="top">
       <div class="flexo-modal__hamburger hamburger mobile">
           <div class="hamburger-icon">
@@ -45,9 +63,8 @@
                           <img src="media/icons/globe.svg" class="language-header__icon" alt="Globe icon">
                           Język / Language
                       </div>
-                      <a href="#"><div class="flexo-modal__menu-element">Polski</div></a>
-                      <a href="#"><div class="flexo-modal__menu-element">English</div></a>
-                      <a href="#"><div class="flexo-modal__menu-element">Deutsch</div></a>
+                      <a href="index_eng.php"><div class="flexo-modal__menu-element">English</div></a>
+                      <a href="index_de.php"><div class="flexo-modal__menu-element">Deutsch</div></a>
                   </div>
               </div>
           </section>
@@ -66,10 +83,10 @@
                       <div class="flexo-topbar__menu-language-header flexo-topbar__menu-list-element" id="language-dropdown-button">
                           <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M15.9 15.39c-.26-.8-1.01-1.39-1.9-1.39h-1v-3a1 1 0 0 0-1-1H6V8h2a1 1 0 0 0 1-1V5h2a2 2 0 0 0 2-2v-.41a7.984 7.984 0 0 1 2.9 12.8zM9 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.22.21-1.79L7 13v1a2 2 0 0 0 2 2v1.93zM10 0C4.477 0 0 4.477 0 10A10 10 0 1 0 10 0z" fill="#666" fill-rule="nonzero"/></svg>
                           <div class="flexo-languages">
-                              <a href="#"><div class="flexo-menu__language-list-element">PL</div></a>
+                              <a><div class="flexo-menu__language-list-element">PL</div></a>
                               <div class="flexo-topbar__menu-languages" id="language-dropdown">
-                                  <a href="#"><div class="flexo-menu-list-element">EN</div></a>
-                                  <a href="#"><div class="flexo-menu-list-element">DE</div></a>
+                                  <a href="index_eng.php"><div class="flexo-menu-list-element">EN</div></a>
+                                  <a href="index_de.php"><div class="flexo-menu-list-element">DE</div></a>
                               </div>
                           </div>
                       </div>
@@ -89,7 +106,7 @@
         <div class="container">
                 <div class="flexo-about__header">
                     <h2 class="flexo-about__header--title">Firma</h2>
-                    <p class="flexo-about__header--into">Firma Flexocore została założona z pasji do druku i tworzenia najlepszych rozwiązań dla klientów, przez Inżyniera z wieloletnim doświadczeniem zdobytym w drukarniach w Europie. Dzięki nowoczesnym technologiom i wysokiej jakości materiałom, tworzymy coś więcej niż projekty. Tworzymy idee i przelewamy je na gotowe produkty i rozwiązania, czyniąc naszą pracę sztuką.
+                    <p class="flexo-about__header--into">Firma Flexocore została założona z pasji do druku i tworzenia najlepszych rozwiązań dla klientów, przez Inżyniera z wieloletnim doświadczeniem zdobytym w drukarniach w Europie. Dzięki nowoczesnym technologiom <br class="desktop">i wysokiej jakości materiałom, tworzymy coś więcej niż projekty. Tworzymy idee i przelewamy je na gotowe produkty i rozwiązania, czyniąc naszą pracę sztuką.
                     </p>
                     <div class="flexo-separator flexo-about__header-separator"></div>
                 </div>
@@ -132,16 +149,30 @@
                     <div class="flexo-about__company-offer-category">OFERTA</div>
                     <h2 class="flexo-about__company-offer--title">Opakowania</h2>
                     <p class="flexo-about__company-offer--text">Produkt finalny. Zwieńczenie pracy mnóstwa osób i efekt końcowy wielu złożonych procesów. Dostarczamy klientom opakowania miękkie z odpowiednich dla zawartości laminatów folii, w wybranym formacie i wzorcu oraz właściwymi dodatkami. Prócz jakości wykonania oraz ładnego wyglądu na półce, opakowania mają za zadanie spełniać funkcje bariery, łatwo się otwierać i ponownie zamykać, a także być wytrzymałe.
-                        Pomagamy dopasować technologię do produkt, dopilnowując proces powstawania opakowania na każdym etapie jego tworzenia.
+                        Pomagamy dopasować technologię do produktu, dopilnowując proces powstawania opakowania na każdym etapie jego tworzenia.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="flexo-numbers" id="about">
+    <section class="flexo-numbers">
+        <div id="about"></div>
         <div class="container flexo-numbers__container">
             <div class="flexo-numbers__item">
-                <div class="flexo-numbers__number">
+                <div class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 230">
+                        <g transform="translate(110,116)">
+                            <circle class="e-c-base" r="100"></circle>
+                            <g transform="rotate(-90)">
+                                <circle r="100" class="e-c-progress"></circle>
+                                <g id="e-pointer">
+                                    <circle cy="0" class="e-c-pointer" r="14" cx="100"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="flexo-numbers__number" data-number="2500" id="first-circle">
                     2500
                 </div>
                 <!--<span class="flexo-numbers__title">-->
@@ -153,8 +184,21 @@
                 </p>
             </div>
             <div class="flexo-numbers__item">
-                <div class="flexo-numbers__number">
-                    2 mln
+                <div class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 230">
+                        <g transform="translate(110,116)">
+                            <circle class="e-c-base" r="100"></circle>
+                            <g transform="rotate(-90)">
+                                <circle r="100" class="e-c-progress"></circle>
+                                <g id="e-pointer">
+                                    <circle cy="0" class="e-c-pointer" r="14" cx="100"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="flexo-numbers__number" data-number="2000000" id="second-circle">
+                    2000000
                 </div>
                 <!--<span class="flexo-numbers__title">-->
                  <!--opakowań-->
@@ -165,7 +209,20 @@
                 </p>
             </div>
             <div class="flexo-numbers__item">
-                <div class="flexo-numbers__number">
+                <div class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 230">
+                        <g transform="translate(110,116)">
+                            <circle class="e-c-base" r="100"></circle>
+                            <g transform="rotate(-90)">
+                                <circle r="100" class="e-c-progress"></circle>
+                                <g id="e-pointer">
+                                    <circle cy="0" class="e-c-pointer" r="14" cx="100"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="flexo-numbers__number" data-number="500" id="third-circle">
                     500
                 </div>
                 <!--<span class="flexo-numbers__title">-->
@@ -190,7 +247,7 @@
                             <h2 class="flexo-people__employees-employee-name">Rafał Korolkiewicz</h2>
                         </div>
                     </div>
-                    <p class="flexo-people__employees-employee-info">Lubię działać szybko i precyzyjnie. Lubię też wiedzieć jak działają maszyny i urządzenia lub dlaczego nie działają :). W pracy planuję zadania i koncentruję się na celu. Interesują mnie konkretne rozwiązania. Prywatnie, moją pasją są biegi długodystansowe, które trenuję nieprzerwanie od kilku lat. Nigdy się nie poddaję.</p>
+                    <p class="flexo-people__employees-employee-info">Lubię działać szybko i precyzyjnie. Lubię też wiedzieć jak działają maszyny i urządzenia lub dlaczego nie działają :) W pracy planuję zadania i koncentruję się na celu. Interesują mnie konkretne rozwiązania. Prywatnie, moją pasją są biegi długodystansowe, które trenuję nieprzerwanie od kilku lat. Nigdy się nie poddaję.</p>
                 </div>
             <div class="flexo-people__employees">
                 <div class="flexo-people__employees--employee-header">
@@ -215,17 +272,16 @@
       <p class="flexo-contact__story">
           Masz pytania o nasze usługi?<br>
           Zadzwoń, napisz, odwiedź nas - chętnie udzielimy informacji.
-
       </p>
       <div class="flexo-info">
           <section class="flexo-contact">
               <div class="container flexo-contact__wrapper">
-                  <form name="flexo-contact" method="POST" action="https://formspree.io/lafioka69@gmail.com">
+                  <form name="flexo-contact" method="POST" action="index.php">
                       <input type="text" class="flexo-contact__input" placeholder="Imię" name="name">
-                      <input type="email" class="flexo-contact__input" placeholder="Email" name="mail">
-                      <input type="tel" class="flexo-contact__input" placeholder="Telefon" name="telephone">
+                      <input type="email" class="flexo-contact__input" placeholder="Email" name="email">
+                      <input type="tel" class="flexo-contact__input" placeholder="Telefon" name="phone">
                       <textarea class="flexo-contact__textarea" name="message" id="flexo-contact" cols="30" rows="8" placeholder="Wiadomość"></textarea>
-                      <button class="flexo-contact__button" type="submit">Wyślij wiadomość <svg width="25" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M16.835.27a.868.868 0 0 0-1.26 0 .926.926 0 0 0 0 1.278l6.388 6.542H.882c-.491 0-.882.4-.882.903 0 .504.39.917.882.917h21.081l-6.388 6.53a.942.942 0 0 0 0 1.29c.352.36.92.36 1.26 0l7.9-8.091a.903.903 0 0 0 0-1.277L16.836.27z" fill="#FFF" fill-rule="nonzero"/></svg>
+                      <button class="flexo-contact__button" type="submit" name="submit">Wyślij wiadomość <svg width="25" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M16.835.27a.868.868 0 0 0-1.26 0 .926.926 0 0 0 0 1.278l6.388 6.542H.882c-.491 0-.882.4-.882.903 0 .504.39.917.882.917h21.081l-6.388 6.53a.942.942 0 0 0 0 1.29c.352.36.92.36 1.26 0l7.9-8.091a.903.903 0 0 0 0-1.277L16.836.27z" fill="#FFF" fill-rule="nonzero"/></svg>
                       </button>
                   </form>
               </div>
@@ -237,14 +293,14 @@
                       <div class="flexo-information_details-container">
                           <div class="flexo-information__item">
                               <img class="flexo-icon" src="media/icons/contact_marker.svg" alt="Pointer icon">
-                              <p>Flexocore Sp. z o.o. Sp. K.<br>ul. Piątkowska 201A<br> 60-693 Poznań
+                              <p>Flexocore Sp. z o.o. Sp. K.<br>ul. Piątkowska 201A<br> 61-693 Poznań
                               </p>
                           </div>
                           <div class="flexo-information__item"><p>NIP 781 19 23 156</p>
                           </div>
                           <div class="flexo-information__item">
                               <img class="flexo-icon" src="media/icons/contact_phone.svg" alt="Phone icon">
-                              <p>+48 696 072 770<br>+48 786 173 323</p>
+                              <p>+48 61 62 33 128</p>
                           </div>
                           <div class="flexo-information__item">
                               <img class="flexo-icon" src="media/icons/contact_mail.svg" alt="Mail icon">
@@ -661,6 +717,7 @@
             <img class="flexo-footer__logo" src="media/images/flexocore_logo.svg" alt="Flexocore logotype">
         </div>
     </section>
+    <script src="js/countUp.js"></script>
     <script src="js/zenscroll-min.js"></script>
     <script src="js/script.js"></script>
   </body>

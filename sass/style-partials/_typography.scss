@@ -1,3 +1,5 @@
+@import "variables";
+
 @font-face {
   font-family: 'Avenir Next LT Pro';
   src: url('../media/fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
@@ -31,5 +33,10 @@ $fontRoboto: 'Roboto', Helvetica, Arial, sans-serif;
   color: #FFFFFF;
   text-align: center;
   font-family: $titleFont;
-  font-size: 70px;
+  font-size: 50px;
+
+
+  @include smallDesktop {
+    font-size: 70px;
+  }
 }

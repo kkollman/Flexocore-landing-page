@@ -121,3 +121,20 @@
     max-width: 1128px;
   }
 }
+
+.flexo-thankyou {
+  padding: 25px;
+  font-family: $fontRoboto;
+  font-size: 16px;
+  box-shadow: $textShadow;
+  position: absolute;
+  width: 100%;
+  color: white;
+  top: 80px;
+  background-color: $mainBlue;
+  transition: all 1.5s;
+
+  &.hidden {
+    opacity: 0;
+  }
+}

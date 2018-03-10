@@ -7,6 +7,7 @@
   color: $contrast;
   padding: 40px 0;
   font-family: $fontRoboto;
+  position: relative;
 
   &__container {
 
@@ -23,6 +24,7 @@
     align-items: center;
     cursor: pointer;
     transition: .3s;
+    position: relative;
 
     @media (min-width: 580px) {
       max-width: 162px;
@@ -39,40 +41,40 @@
       max-width: 378px;
     }
 
-    &:hover {
-      transform: scale(1.1);
+    //&:hover {
+    //  transform: scale(1.1);
+    //
+    //  .flexo-rolled-divider {
+    //    width: 20%;
+    //  }
 
-      .flexo-rolled-divider {
-        width: 20%;
-      }
-
-      .flexo-numbers__number {
-        border: none;
-        background-color: $contrast;
-        color: $mainBlue;
-        animation-name: pulse;
-        animation-duration: 0.8s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        font-size: 30px;
-
-        &:before {
-          background-color: transparent;
-          height: 95px;
-          width: 95px;
-          top: 4px;
-          left: 4px;
-          border: 3px solid $mainBlue;
-
-          @include desktop {
-            top: 6px;
-            left: 6px;
-            height: 160px;
-            width: 160px;
-          }
-        }
-      }
-    }
+      //.flexo-numbers__number {
+      //  border: none;
+      //  background-color: $contrast;
+      //  color: $mainBlue;
+      //  animation-name: pulse;
+      //  animation-duration: 0.8s;
+      //  animation-direction: alternate;
+      //  animation-iteration-count: infinite;
+      //  font-size: 30px;
+      //
+      //  &:before {
+      //    background-color: transparent;
+      //    height: 95px;
+      //    width: 95px;
+      //    top: 4px;
+      //    left: 4px;
+      //    border: 3px solid $mainBlue;
+      //
+      //    @include desktop {
+      //      top: 6px;
+      //      left: 6px;
+      //      height: 160px;
+      //      width: 160px;
+      //    }
+      //  }
+      //}
+    //}
   }
 
   &__number {
@@ -80,44 +82,22 @@
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 21px;
-    height: 108px;
-    width: 108px;
-    border-radius: 50%;
-    border: 4px solid $contrast;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
     transition: all 0.3s;
     cursor: pointer;
-
-    &:before {
-      position: absolute;
-      top: -8px;
-      left: 42px;
-      content: '';
-      display: block;
-      height: 16px;
-      width: 16px;
-      background-color: $contrast;
-      border-radius: 50%;
-      transition: all 0.6s;
-      text-align: center;
-    }
+    top: 48px;
+    left: 50%;
+    transform: translatex(-50%);
+    white-space: nowrap;
 
     @include desktop {
-      height: 178px;
-      width: 178px;
       font-size: 30px;
       line-height: 35px;
       letter-spacing: 2px;
-
-      &:before {
-        height: 28px;
-        width: 28px;
-        top: -15px;
-        left: 73px;
-      }
+      top: 75px;
     }
   }
 
@@ -159,5 +139,34 @@
   transition: all 0.6s;
   margin-top: 10px;
   margin-bottom: 5px;
+}
 
+.e-c-base {
+  fill: none;
+}
+
+.e-c-progress {
+  fill: none;
+  stroke: $contrast;
+  stroke-width: 8px;
+  transition: stroke-dashoffset 0.7s;
+}
+
+.e-c-pointer {
+  fill: #FFF;
+}
+
+#e-pointer { transition: transform 1s; }
+
+#about {
+  position: absolute;
+  top: 22px;
+}
+
+.circle svg {
+  width: 108px;
+
+  @include desktop {
+    width: 178px;
+  }
 }
